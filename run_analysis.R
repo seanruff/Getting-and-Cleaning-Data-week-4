@@ -30,7 +30,7 @@ featuresWanted.names = gsub('-mean', 'Mean', featuresWanted.names)
 featuresWanted.names = gsub('-std', 'Std', featuresWanted.names)
 featuresWanted.names <- gsub('[-()]', '', featuresWanted.names)
 
-## Read alternant datasets
+## Read alternant datasets 
 
 ## Dateset test
 test <- read.table("UCI HAR Dataset/test/X_test.txt")[featuresWanted]
@@ -38,7 +38,7 @@ testActivities <- read.table("UCI HAR Dataset/test/Y_test.txt")
 testSubjects <- read.table("UCI HAR Dataset/test/subject_test.txt")
 test <- cbind(testSubjects, testActivities, test)
 
-## Dataset train
+## Read Dataset train
 train <- read.table("UCI HAR Dataset/train/X_train.txt")[featuresWanted]
 trainActivities <- read.table("UCI HAR Dataset/train/Y_train.txt")
 trainSubjects <- read.table("UCI HAR Dataset/train/subject_train.txt")
